@@ -1,0 +1,244 @@
+<!DOCTYPE html> 
+<html lang=en-US style=scroll-behavior:auto>
+<head>
+    <title>Arbeitsplatzfinder</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body> 
+     <!-- Icon-Sammlung (wird mit <use> eingebunden) -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <symbol id="icon-mail" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M2 5h20v14H2V5zm2 2v.5l8 5 8-5V7H4zm16 2.8-8 5-8-5V17h16V9.8z"/>
+    </symbol>
+    <symbol id="icon-arrow" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="3" d="M9 5l7 7-7 7"/>
+    </symbol>
+    <symbol id="icon-pin" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
+    </symbol>
+    <symbol id="icon-database" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 2C7 2 3 3.6 3 5.5v3C3 10.4 7 12 12 12s9-1.6 9-3.5v-3C21 3.6 17 2 12 2zm-9 9.3v3.2C3 16.4 7 18 12 18s9-1.6 9-3.5v-3.2c-1.9 1.4-5.3 2.2-9 2.2s-7.1-.8-9-2.2zm0 6v1.2C3 20.4 7 22 12 22s9-1.6 9-3.5v-1.2c-1.9 1.4-5.3 2.2-9 2.2s-7.1-.8-9-2.2z"/>
+    </symbol>
+    <symbol id="icon-code" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2.5" d="M8 6l-6 6 6 6M16 6l6 6-6 6M14 4l-4 16"/>
+    </symbol>
+    <symbol id="icon-layout" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M2 3h20v18H2V3zm2 2v4h16V5H4zm0 6v8h6v-8H4zm8 0v8h8v-8h-8z"/>
+    </symbol>
+    <symbol id="icon-magic" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M3 19.6 15.6 7l1.4 1.4L4.4 21 3 19.6zM18 2l1 2.5L21.5 5 19 6l-1 2.5L17 6l-2.5-1L17 4.5 18 2zM10 2l.7 1.8 1.8.7-1.8.7L10 7l-.7-1.8-1.8-.7 1.8-.7L10 2zm10 9 .7 1.8 1.8.7-1.8.7L20 16l-.7-1.8-1.8-.7 1.8-.7L20 11z"/>
+    </symbol>
+    <symbol id="icon-bell" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 22a2.5 2.5 0 0 0 2.5-2.5h-5A2.5 2.5 0 0 0 12 22zm7-6V11a7 7 0 0 0-5.5-6.8V3a1.5 1.5 0 0 0-3 0v1.2A7 7 0 0 0 5 11v5l-2 2v.5h18V18l-2-2z"/>
+    </symbol>
+    <symbol id="icon-flag" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M4 2h2v20H4V2zm3 1h13l-3 5 3 5H7V3z"/>
+    </symbol>
+  </svg>
+ 
+  <!-- ================= Navigation ================= -->
+  <nav class="nav" aria-label="Hauptnavigation">
+    <ul class="nav__list">
+      <li><a href="#beschreibung">Projektbeschreibung</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#meilensteine">Meilensteine</a></li>
+      <li><a href="#fortschritt">Projektfortschritt</a></li>
+    </ul>
+  </nav>
+ 
+
+  <header class="hero" id="start">
+    <div class="container hero__inner">
+      <div>
+        <h1 class="hero__title">Arbeits&shy;platz&shy;finder</h1>
+        <a class="button" href="#beschreibung">Unser Projekt</a>
+      </div>
+ 
+       <img src="./Logo_BookIT.png" width="600" height="230" />
+    </div>
+  </header>
+ 
+  <main>
+ 
+    <!-- ================= Projektbeschreibung ================= -->
+    <section class="section section--dark" id="beschreibung">
+      <div class="container">
+        <div class="section-heading">
+          <h2 class="section-heading__title">Projektbeschreibung</h2>
+          <span class="section-heading__subtitle">Unser Projekt kurz erklärt</span>
+        </div>
+ 
+        <div class="columns-3">
+          <div class="description-block">
+            <!-- <h3>Description:</h3> -->
+            <p>In Zuge der Abteilungsentwicklung der HIT am TGM soll die Möglichkeit geschaffen werden Arbeitsplätze 
+                als auch Co-Working Spaces für einzelne Personen oder Gruppen von SchülerInnen/LehrerInnen zu reservieren. 
+                Dazu soll die Option bestehen, Arbeitsumgebungen hinzuzufügen, bzw. bestehende zu bearbeiten oder zu entfernen.
+                 Als Startpunkt dient das Lernbüro mit dessen buchbaren Arbeitsplätzen.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- ================= Team ================= -->
+    <section class="section section--light team" id="team">
+      <div class="container">
+        <div class="section-heading section-heading--right">
+          <h2 class="section-heading__title">Team</h2>
+          <span class="section-heading__subtitle">Unser Projektteam</span>
+        </div>
+      </div>
+ 
+      <div class="team-grid">
+        <article class="team-card">
+          <!-- Foto: <img class="team-card__photo" src="bilder/person1.jpg" alt="Person 1"> -->
+          <div class="team-card__photo team-card__photo--placeholder">P1</div>
+          <h3 class="team-card__name">Anastasija Djokic</h3>
+          <div class="team-card__divider"></div>
+          <p class="team-card__role">UI/UX Design und erstellen von Tutorial Videos</p>
+          <a class="team-card__mail" href="adjokic@student.tgm.ac.at">
+            <svg><use href="#icon-mail"/></svg> adjokic@student.tgm.ac.at
+          </a>
+        </article>
+ 
+        <article class="team-card">
+          <div class="team-card__photo team-card__photo--placeholder">P2</div>
+          <h3 class="team-card__name">Katja Lin Mayer</h3>
+          <div class="team-card__divider"></div>
+          <p class="team-card__role">Backend - Logik</p>
+          <a class="team-card__mail" href="kmayer@student.tgm.ac.at">
+            <svg><use href="#icon-mail"/></svg> kmayer@student.tgm.ac.at
+          </a>
+        </article>
+ 
+        <article class="team-card">
+          <div class="team-card__photo team-card__photo--placeholder">P3</div>
+          <h3 class="team-card__name">Henry Tabor</h3>
+          <div class="team-card__divider"></div>
+          <p class="team-card__role">Fonrend von der Webb-App</p>
+          <a class="team-card__mail" href="htabor@student.tgm.ac.at">
+            <svg><use href="#icon-mail"/></svg> htabor@student.tgm.ac.at
+          </a>
+        </article>
+ 
+        <article class="team-card">
+          <div class="team-card__photo team-card__photo--placeholder">P4</div>
+          <h3 class="team-card__name">Mark Toth</h3>
+          <div class="team-card__divider"></div>
+          <p class="team-card__role">Backend - Datenbank</p>
+          <a class="team-card__mail" href="mtoth@student.tgm.ac.at">
+            <svg><use href="#icon-mail"/></svg> mtoth@student.tgm.ac.at
+          </a>
+        </article>
+      </div>
+    </section>
+ 
+    <!-- ================= Meilensteine ================= -->
+    <section class="section section--dark" id="meilensteine">
+      <div class="container">
+        <div class="section-heading">
+          <h2 class="section-heading__title">Meilensteine und Status</h2>
+          <span class="section-heading__subtitle">Aktueller Status: Prototyp für den Tag der offenen Tür in Arbeit</span>
+        </div>
+ 
+        <div class="milestone-grid">
+          <div class="milestone milestone--done">
+            <h3 class="milestone__title">Fertigstellung eines ersten Prototyps</h3>
+            <p class="milestone__date">17.09.2026</p>
+            <p class="milestone__text"></p>
+          </div>
+ 
+          <div class="milestone">
+            <h3 class="milestone__title">Prototyp für den Tag der offenen Tür</h3>
+            <p class="milestone__date">30.10.2026</p>
+            <p class="milestone__text"></p>
+          </div>
+ 
+          <div class="milestone">
+            <h3 class="milestone__title">Fertigstellung der graphischen Oberfläche</h3>
+            <p class="milestone__date">13.11.2026</p>
+            <p class="milestone__text"></p>
+          </div>
+ 
+          <div class="milestone">
+            <h3 class="milestone__title">Fertigstellung der Bakcendimplementierung</h3>
+            <p class="milestone__date">23.12.2026</p>
+            <p class="milestone__text"></p>
+          </div>
+ 
+          <div class="milestone">
+            <h3 class="milestone__title">Letzer Test</h3>
+            <p class="milestone__date">26.02.2027</p>
+            <p class="milestone__text"></p>
+          </div>
+ 
+          <div class="milestone">
+            <h3 class="milestone__title">Übergabe an den Abteilungsvorstand</h3>
+            <p class="milestone__date">19.03.2027</p>
+            <p class="milestone__text"></p>
+          </div>
+ 
+          <div class="milestone milestone--center">
+            <h3 class="milestone__title">Abgabe des Projekts</h3>
+            <p class="milestone__date">06.04.2027</p>
+            <p class="milestone__text"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- ================= Projektfortschritt (Timeline) ================= -->
+    <section class="section section--light" id="fortschritt">
+      <div class="container">
+        <div class="section-heading">
+          <h2 class="section-heading__title">Projektfortschritt</h2>
+        </div>
+ 
+        <ol class="timeline">
+          <li class="timeline__item">
+            <span class="timeline__date">17.09.2026</span>
+            <span class="timeline__dot"></span>
+            <div class="timeline__card">
+              <h3>Fertigstellung eines ersten Prototypen</h3>
+            </div>
+          </li>
+          
+        </ol>
+      </div>
+    </section>
+ 
+  </main>
+ 
+  <!-- ================= Footer ================= -->
+  <footer class="footer">
+    <div class="container footer__columns">
+      <div>
+        <h4>Kontakt</h4>
+        <ul class="footer__list">
+          <li><a href="adjokic@student.tgm.ac.at"><svg><use href="#icon-mail"/></svg>person1@example.com</a></li>
+          <li><a href="kmayer@student.tgm.ac.at"><svg><use href="#icon-mail"/></svg>person2@example.com</a></li>
+          <li><a href="htabor@student.tgm.ac.at"><svg><use href="#icon-mail"/></svg>person3@example.com</a></li>
+          <li><a href="mtoth@student.tgm.ac.at"><svg><use href="#icon-mail"/></svg>person4@example.com</a></li>
+          <li><span><svg><use href="#icon-pin"/>Wexstraße 19-23, 1200 Wien, Österreich</svg></span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <span>Arbeitsplatzfinder 2026</span>
+        <span>Anastasija Djokic, Katja Lin Mayer, Henry Tabor, Mark Toth</span>
+      </div>
+    </div>
+  </footer>
+ 
+</body>
+
+</html>
+
+
+
+

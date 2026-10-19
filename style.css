@@ -1,0 +1,633 @@
+/*
+Arbeitsplatzfinder - Stylesheet
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Heebo:wght@300;400;500&display=swap");
+ 
+/* ---------- Farben & Grundwerte ---------- */
+:root {
+  --primary: #203973;      
+  --secondary: #f9f9f9;    
+  --third: #cfdee7;        
+  --accent: #d91b3e;       /* Rot (Timeline) */
+  --black: #000000;
+  --white: #fbf9f9;
+  --text-light: #e6ecfa;   /* Fließtext auf dunklem Blau */
+ 
+  --font-heading: "Poppins", sans-serif;
+  --font-body: "Heebo", sans-serif;
+ 
+  --container: 1140px;
+}
+ 
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+ 
+html {
+  scroll-behavior: smooth;
+}
+ 
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--primary);
+  background: var(--secondary);
+}
+ 
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-heading);
+  margin: 0;
+  line-height: 1.25;
+}
+ 
+p {
+  margin: 0;
+}
+ 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ 
+img {
+  max-width: 100%;
+  display: block;
+}
+ 
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+ 
+/* ---------- Abschnitte ---------- */
+.section {
+  padding: 110px 0;
+  scroll-margin-top: 0;
+}
+ 
+.section--dark {
+  background: var(--primary);
+  color: var(--text-light);
+}
+ 
+.section--light {
+  background: var(--secondary);
+  color: var(--primary);
+}
+ 
+/* ---------- Abschnitts-Überschrift (Linie + Titel) ---------- */
+.section-heading {
+  margin-bottom: 50px;
+}
+ 
+.section-heading__title {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-size: 48px;
+  font-weight: 700;
+}
+ 
+.section-heading__title::before {
+  content: "";
+  flex: 0 0 136px;
+  height: 3px;
+  background: currentColor;
+}
+ 
+.section-heading__subtitle {
+  display: block;
+  margin-top: 22px;
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+ 
+/* Variante: rechtsbündig, Linie rechts (wie "Team") */
+.section-heading--right {
+  text-align: right;
+}
+ 
+.section-heading--right .section-heading__title {
+  justify-content: flex-start; /* bei row-reverse = rechts */
+  flex-direction: row-reverse;
+}
+ 
+.section--dark .section-heading__title {
+  color: var(--secondary);
+}
+ 
+.section--light .section-heading__subtitle {
+  color: var(--third);
+}
+ 
+/* ---------- Navigation ---------- */
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 30px;
+  z-index: 10;
+}
+ 
+.nav__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  margin: 0;
+  padding: 0 20px;
+  list-style: none;
+}
+ 
+.nav__list a {
+  font-family: var(--font-body);
+  font-size: 19px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary);
+  transition: opacity 0.2s;
+}
+ 
+.nav__list a:hover {
+  opacity: 0.7;
+}
+ 
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--secondary);
+  padding: 120px 0 80px;
+}
+ 
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+ 
+.hero__authors {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 30px;
+}
+ 
+.hero__title {
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+ 
+.hero__image {
+  justify-self: center;
+  width: 100%;
+  max-width: 380px;
+}
+ 
+/* ---------- Button ---------- */
+.button {
+  display: inline-block;
+  padding: 18px 30px;
+  border: 2px solid var(--third);
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary);
+  transition: background 0.2s, color 0.2s;
+}
+ 
+.button:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--white);
+}
+ 
+/* ---------- Projektbeschreibung (3 Spalten) ---------- */
+.columns-3 {
+  display: block;
+}
+
+.description-block{
+    max-width: 100%
+}
+ 
+.description-block h3 {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--secondary);
+  margin-bottom: 20px;
+}
+ 
+.description-block p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+ 
+/* ---------- Team ---------- */
+.team {
+  padding-bottom: 30px;
+}
+ 
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 0 10px;
+}
+ 
+.team-card {
+  background: var(--primary);
+  color: var(--text-light);
+  padding: 50px 35px 45px;
+}
+ 
+.team-card__photo {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 40px;
+}
+ 
+/* Platzhalter, solange keine Fotos vorhanden sind */
+.team-card__photo--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--third);
+  font-family: var(--font-heading);
+  font-size: 56px;
+  font-weight: 600;
+  color: var(--primary);
+}
+ 
+.team-card__name {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--secondary);
+}
+ 
+.team-card__divider {
+  width: 78px;
+  height: 2px;
+  margin: 22px 0 28px 5px;
+  background: var(--secondary);
+}
+ 
+.team-card__role {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+ 
+.team-card__mail {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  color: var(--secondary);
+}
+ 
+.team-card__mail svg {
+  width: 14px;
+  height: 14px;
+}
+ 
+/* ---------- Meilensteine ---------- */
+.milestone-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px 30px;
+}
+ 
+.milestone {
+  background: var(--secondary);
+  border-bottom: 5px solid var(--white);
+  padding: 50px;
+  color: var(--black);
+}
+ 
+.milestone__icon {
+  width: 40px;
+  height: 40px;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+ 
+.milestone__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 18px;
+}
+ 
+.milestone__date {
+  font-size: 15px;
+  margin-bottom: 26px;
+}
+ 
+.milestone__text {
+  font-size: 15px;
+  line-height: 1.7;
+}
+ 
+.milestone--done .milestone__date::after {
+  content: " (Abgeschlossen)";
+}
+ 
+/* letzter Meilenstein mittig, wie in der Vorlage */
+.milestone--center {
+  grid-column: 2;
+}
+ 
+/* ---------- Timeline (Projektfortschritt) ---------- */
+.timeline {
+  position: relative;
+  max-width: 1010px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 30px 0 0;
+}
+ 
+/* senkrechte Linie */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.35);
+}
+ 
+.timeline__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 80px 1fr;
+  align-items: start;
+  margin-bottom: 40px;
+}
+ 
+.timeline__date {
+  grid-column: 1;
+  grid-row: 1;
+  text-align: right;
+  padding-top: 18px;
+  font-family: var(--font-body);
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--primary);
+}
+ 
+/* roter Punkt */
+.timeline__dot {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+  width: 20px;
+  height: 20px;
+  margin-top: 22px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+ 
+.timeline__card {
+  grid-column: 3;
+  grid-row: 1;
+  position: relative;
+  background: var(--white);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 22px 20px;
+  box-shadow: 0 10px 30px rgba(10, 54, 157, 0.15);
+}
+ 
+/* kleiner roter Pfeil zur Linie */
+.timeline__card::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  left: -14px;
+  border: 10px solid transparent;
+  border-right-color: var(--accent);
+  border-left-width: 0;
+}
+ 
+.timeline__card h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--primary);
+}
+ 
+.timeline__card p {
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--primary);
+}
+ 
+/* jeder zweite Eintrag: Karte links, Datum rechts */
+.timeline__item:nth-child(even) .timeline__date {
+  grid-column: 3;
+  text-align: left;
+}
+ 
+.timeline__item:nth-child(even) .timeline__card {
+  grid-column: 1;
+  border-left: none;
+  border-right: 4px solid var(--accent);
+}
+ 
+.timeline__item:nth-child(even) .timeline__card::before {
+  left: auto;
+  right: -14px;
+  border-right-width: 0;
+  border-left-width: 10px;
+  border-right-color: transparent;
+  border-left-color: var(--accent);
+}
+ 
+/* ---------- Footer ---------- */
+.footer {
+  background: var(--primary);
+  color: var(--secondary);
+  padding-top: 110px;
+}
+ 
+.footer__columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 70px;
+}
+ 
+.footer h4 {
+  font-size: 19px;
+  font-weight: 500;
+  margin-bottom: 35px;
+}
+ 
+.footer__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ 
+.footer__list li {
+  margin-bottom: 18px;
+}
+ 
+.footer__list a,
+.footer__list span {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+ 
+.footer__list a:hover {
+  color: var(--white);
+}
+ 
+.footer__list svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+ 
+.footer__bottom {
+  border-top: 1px solid rgba(146, 180, 244, 0.25);
+  margin: 0 20px;
+}
+ 
+.footer__bottom .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 22px;
+  padding-bottom: 30px;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--third);
+}
+ 
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero__title {
+    font-size: 56px;
+  }
+}
+ 
+@media (max-width: 768px) {
+  .section {
+    padding: 70px 0;
+  }
+ 
+  .nav__list a {
+    font-size: 15px;
+  }
+ 
+  .hero__inner,
+  .columns-3,
+  .milestone-grid,
+  .footer__columns {
+    grid-template-columns: 1fr;
+  }
+ 
+  .hero__image {
+    max-width: 260px;
+    grid-row: 1;
+  }
+ 
+  .hero__title {
+    font-size: 44px;
+  }
+ 
+  .section-heading__title {
+    font-size: 28px;
+    gap: 14px;
+  }
+ 
+  .team-card__photo {
+    max-width: 260px;
+  }
+ 
+  .section-heading__title::before {
+    flex-basis: 50px;
+  }
+ 
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+ 
+  .milestone--center {
+    grid-column: auto;
+  }
+ 
+  /* Timeline: alles einspaltig, Linie links */
+  .timeline::before {
+    left: 10px;
+  }
+ 
+  .timeline__item,
+  .timeline__item:nth-child(even) {
+    grid-template-columns: 20px 1fr;
+    column-gap: 20px;
+  }
+ 
+  .timeline__dot {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    margin-top: 4px;
+  }
+ 
+  .timeline__date,
+  .timeline__item:nth-child(even) .timeline__date {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: left;
+    padding-top: 0;
+    margin-bottom: 10px;
+  }
+ 
+  .timeline__card,
+  .timeline__item:nth-child(even) .timeline__card {
+    grid-column: 2;
+    grid-row: 2;
+    border-right: none;
+    border-left: 4px solid var(--accent);
+  }
+ 
+  .timeline__card::before,
+  .timeline__item:nth-child(even) .timeline__card::before {
+    display: none;
+  }
+}
